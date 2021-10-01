@@ -4,9 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <title>Kowit 01</title>
+    
+    <script type="text/javascript">
+        function goFurther(){
+        if (document.getElementById("chkAgree").checked == true)
+        document.getElementById("btnSubmit").disabled = false;
+        else
+        document.getElementById("btnSubmit").disabled = true;
+        }
+        </script>
 </head>
 <body>
-    <h1>kowit</h1>
+    <center><h1 style="font-size: 100px;">Register</h1></center>
+    <br>
+   <div class="row">
+       <div class="col-md-2"></div>
+       <div class="col-md-8">
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="name" >
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastname" >
+            </div>
+            <div class="col-md-4">
+              <label for="inputCity" class="form-label">Birthday</label>
+              <input type="Date" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-2">
+                <label for="inputCity" class="form-label">Gender</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>-- select --</option>
+                    <option value="1">Men</option>
+                    <option value="2">Women</option>
+                  </select>
+              </div>
+            <div class="col-md-2">
+              <label for="inputState" class="form-label">Weight</label>
+              <input type="number" class="form-control" id="Weight" placeholder="Kg.">
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Height</label>
+              <input type="number" class="form-control" id="Height" placeholder="Cm.">
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Favorite color</label>
+                <input type="text" class="form-control" id="color" placeholder="Red , Green">
+              </div>
+            <div class="col-6">
+                <label for="formFile" class="form-label">Image file input</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="col-6">
+                <label for="formFile" class="form-label">Favorite country</label><br>
+                <div class="form-check form-check-inline" style="margin-top: 7px;">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Thailand</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">England</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Brazil</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Russia</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Nepal</label>
+                  </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="chkAgree" onclick="goFurther()">
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+            <div class="col-12">
+              <input type="button" id="btnSubmit" value="Submit" disabled class="btn btn-primary">
+              <button type="reset" class="btn btn-primary">Clear</button>
+            </div>
+          </form>
+       </div>
+       <div class="col-md-2"></div>
+   </div>
+
 </body>
 </html>
